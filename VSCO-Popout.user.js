@@ -24,5 +24,3 @@ function getVideoContent() {
 $(document).click(function(){
    getVideoContent()
 });
-
-v
