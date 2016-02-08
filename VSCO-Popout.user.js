@@ -2,10 +2,12 @@
 // @name        VSCO Image Pop
 // @namespace   com.xela722.GreaseMonkey
 // @description pops images from vsco
-// @include     http://*.vsco.co/*
-// @exclude     http://grid.vsco.co/feed*
-// @exclude     http://*.vsco.co/grid*
-// @exclude     http://*vsco.co/
+// @include     https://*.vsco.co/*
+// @include     https://vsco.co/*
+// @exclude     https://grid.vsco.co/feed*
+// @exclude     https://*.vsco.co/grid/*
+// @exclude     https://vsco.co/
+// @exclude     https://vsco.co/*/grid/*
 // @version     1
 // @grant       none
 // ==/UserScript==
@@ -19,4 +21,8 @@ function getVideoContent() {
    } 
   window.open(x)
 } 
-getVideoContent()
+$(document).click(function(){
+   getVideoContent()
+});
+
+v
