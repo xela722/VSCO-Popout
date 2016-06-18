@@ -11,16 +11,19 @@
 // @version     1
 // @grant       none
 // ==/UserScript==
-function getVideoContent() { 
-   var metas = document.getElementsByTagName('meta'); 
-
-   for (i=0; i<metas.length; i++) { 
-     if (metas[i].getAttribute("property") == "og:image") { 
-         var x = metas[i].getAttribute("content"); 
+$(document).ready(function(){
+   location.reload();
+)};
+   function getVideoContent() { 
+      var metas = document.getElementsByTagName('meta'); 
+   
+      for (i=0; i<metas.length; i++) { 
+        if (metas[i].getAttribute("property") == "og:image") { 
+            var x = metas[i].getAttribute("content"); 
+         } 
       } 
+     window.open(x)
    } 
-  window.open(x)
-} 
-$(document).click(function(){
-   getVideoContent()
-});
+   $(document).click(function(){
+      getVideoContent()
+   });
