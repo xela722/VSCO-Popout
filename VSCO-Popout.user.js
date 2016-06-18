@@ -13,7 +13,7 @@
 // ==/UserScript==
 $(document).ready(function(){
    location.reload();
-)};
+
    function getVideoContent() { 
       var metas = document.getElementsByTagName('meta'); 
    
@@ -27,3 +27,4 @@ $(document).ready(function(){
    $(document).click(function(){
       getVideoContent()
    });
+)};
